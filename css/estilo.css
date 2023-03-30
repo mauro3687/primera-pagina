@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --color-texto:#3cec1cc7;
+    --color-texto-4:#7ff409c7;
+    --color-texto-1:#f36f11f7;
+    --color-texto-2:#7d877b28;
+    --color-texto-3:#a1b89da1;
+    --color-header:#50505083;
+    --color-header-borde:#505050;
+}
+body{
+    background: url(fondo.jpg);
+    background-size: cover;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.navegacion{
+    background: var(--color-header-borde);
+    border: 5px solid var(--color-header);
+    height: 60px;
+}
+
+.link{
+    padding: 12%;
+    font-size: 25px;
+    color: var(--color-texto);
+    text-decoration: none;
+
+}
+.link:hover{
+    color: var(--color-texto-1);
+}
+.header{
+    padding: 30px;
+    
+}
+.title-inicio{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-radius: 40px;
+    clip-path: circle(48%);
+    transition-property: clip-path;
+    transition-duration: 2s;
+    
+    background: rgb(157, 79, 79);
+}
+.title-inicio:hover{
+    background: red;
+    clip-path: circle(100%);
+
+}
+.pagina-total{
+    width: 100%;
+    
+}
+.info{
+    color: var(--color-texto-4);
+    width: 80%;
+    float: left;
+    margin: 1%;
+    
+    
+}
+.aside{
+    width: 18%;
+    padding: 20px;
+    float: left;
+    
+    
+}
+.prueba{
+    color: var(--color-texto-2);
+    clip-rule: nonzero;
+    transition-delay: 3s;
+
+}
+.prueba:hover{
+    background: yellow;
+}
+
+
+
+.title{
+    padding: 30px;
+
+}
+.foto{
+    padding: 1%;
+    float: left;
+    width: 100px;
+    height: 100px;
+    transition-duration: 2s;
+}
+.foto:hover{
+    width: 25%;
+    height: 25%;
+    
+}
+.piepagina{
+    width: 100%;
+    height: 20%;
+    margin: 1%;
+    background: var(--color-header);
+}
+.link-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    color: var(--color-texto-1);
+    clip-path: circle(20%);
+    text-align: center;
+    
+    
+    text-decoration: none;
+}
+.link-footer:hover{
+    clip-path: circle(100%);
+    background: #505050;
+}
+.lista{
+    float: left;
+}
+
+.link-foto-footer{ 
+  
+    
+}
+.footer{
+    background: var(--color-header-borde);
+    text-align: center;
+    border: solid 4px #50505000;
+    
+   
+}
+
+.clearfix{
+    clear: both;
+}
+/* contactanos.css
+aca comienza lo del otra idicion de la segunda pagina */
+
+.card{
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 350px;
+    margin: 13%;
+    justify-content: center;
+    align-items: center;
+}
+.card .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card .front h3{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgb(0,0,0,.4);
+    text-align: center;
+    
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background:rgb(3,35,54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card .back .link-back{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+
+}
+.card .back  .link-back {
+    color: #f3f3f3;
+}
+.card .back .h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back .p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+    
+}
